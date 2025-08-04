@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>稀土掘金</title>
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/c/font_4984826_szqf3w0qoqb.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        background-color: rgba(242, 243, 245);
+      }
+      li {
+        list-style-type: none;
+      }
+      a {
+        color: inherit; /* 继承父元素文本颜色 */
+        text-decoration: none; /* 移除下划线 */
+        cursor: pointer; /* 保留手型光标 */
+        background-color: transparent; /* 移除可能的背景色 */
+        outline: none;
+      }
+      .article-list:hover {
+        border-bottom: 4px #333 solid;
+        padding-bottom: 30px;
+        color: #ff0000;
+      }
+      .sidebar :hover {
+        color: #0022ff;
+      }
+
+      nav ul {
+        display: inline-block;
+      }
+      nav ul li {
+        display: inline-block;
+        width: 65px;
+      }
+      nav div {
+        display: inline-block;
+        width: 417px;
+      }
+      nav div a {
+        display: inline-block;
+        width: 82px;
+      }
+      header {
+        height: 60px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(255, 255, 255);
+        height: 100%;
+        font-size: 1.167rem;
+      }
+      /* 侧边栏容器 */
+      .sidebar {
+        width: 200px;
+        background-color: #fff;
+        border-right: 1px solid #eee;
+        padding: 16px 0;
+      }
+      .user-area {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      /* 菜单项 */
+      .sidebar-item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        text-decoration: none;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+
+      /* 图标样式 */
+      .sidebar-item i {
+        width: 20px;
+        text-align: center;
+        margin-right: 8px;
+      }
+      /* 激活/选中状态 */
+      .sidebar-item.active {
+        font-weight: bold;
+      }
+
+      /* 悬浮效果 */
+      .sidebar-item:hover {
+        background-color: rgba(247, 248, 250);
+      }
+      .sidebar-item:active {
+        background-color: red;
+      }
+
+      .search {
+        display: flex;
+        justify-content: center;
+      }
+      .search input {
+        width: 310px;
+        height: 30px;
+      }
+      .box .sidebar {
+        display: inline-block;
+        min-width: 180px;
+        box-sizing: border-box;
+        padding: 8px;
+
+        color: #fff;
+        height: 515px;
+        width: 180px;
+        background-color: rgba(255, 255, 255);
+
+        padding: 10px;
+      }
+      .box .article-list {
+        display: inline-block;
+        background-color: rgba(255, 255, 255);
+        width: 720px;
+      }
+      .article-list .article-item {
+        border-bottom: 1px solid rgba(228, 230, 235, 0.5);
+        height: 95px;
+        width: 720px;
+      }
+      .article-item .meta-taem {
+        display: flex;
+      }
+      .article-meta {
+        display: flex;
+        justify-content: space-between;
+      }
+      .meta-item {
+        margin-right: 10px;
+      }
+      .box .greeting {
+        display: inline-block;
+      }
+      .box {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+      }
+      .meta-item {
+        display: flex;
+      }
+
+      .article-ranking-section {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255);
+        margin-bottom: 35px;
+      }
+      .greeting-section {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255);
+        margin-bottom: 35px;
+      }
+      .author-rank {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255);
+        margin-bottom: 35px;
+      }
+      .recommend-topic {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255);
+        margin-bottom: 35px;
+      }
+      /* .meta-item { }*/
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/" class="logo"></a>
+        <ul>
+          <!-- <li><a href="/">首页</a></li> -->
+          <li><a href="./skip5.html">首页</a></li>
+          <li><a href="./skip5.html">沸点</a></li>
+          <li><a href="./skip5.html">课程</a></li>
+          <li><a href="./skip5.html">直播</a></li>
+          <li><a href="./skip5.html">活动</a></li>
+          <li><a href="./skip5.html">沸点</a></li>
+          <li><a href="./skip5.html">APP</a></li>
+          <li><a href="./skip5.html">插件</a></li>
+        </ul>
+        <div class="search">
+          <input name="text" type="text" placeholder="探索稀土掘金" />
+          <button>搜索</button>
+        </div>
+        <div class="user-area">
+          <a href="./skip5.html">创作者中心</a>
+          <a href="./skip5.html">会员</a>
+          <a href="./skip5.html">头像</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="box">
+      <div class="sidebar">
+        <div class="sidebar-item active" data-type="1">
+          <i class="iconfont icon-guanzhu"></i>关注
+        </div>
+        <div class="sidebar-item" data-type="2">
+          <i class="iconfont icon-zonghe">x</i>综合
+        </div>
+        <div class="sidebar-item" data-type="3">
+          <i class="iconfont icon-houduankaifa"></i>后端
+        </div>
+        <div class="sidebar-item" data-type="4">
+          <i class="iconfont icon-qianduankaifa"></i>前端
+        </div>
+        <div class="sidebar-item" data-type="5">
+          <i class="iconfont icon-android"></i>Android
+        </div>
+        <div class="sidebar-item" data-type="6">
+          <i class="iconfont icon-ios"></i>iOS
+        </div>
+        <div class="sidebar-item" data-type="7">
+          <i class="iconfont icon-rengongzhineng"></i>人工智能
+        </div>
+        <div class="sidebar-item" data-type="8">
+          <i class="iconfont icon-kaifagongju"></i>开发工具
+        </div>
+        <div class="sidebar-item" data-type="9">
+          <i class="iconfont icon-yuedu"></i>阅读
+        </div>
+        <div class="sidebar-item" data-type="10">
+          <i class="iconfont icon-paihangbang_paiming"></i>排行榜
+        </div>
+      </div>
+      <div class="article-list" id="articleList">
+        <!-- <div class="article-item">
+          <a href="#" class="article-title">setState 实现原理</a>
+          <p class="article-desc">setState 什么时候是同步的</p>
+
+          <div class="article-meta">
+            <div class="meta-taem">
+              <div class="meta-item">挂斗</div>
+              <div class="meta-item"><i>日历</i> 2年前</div>
+              <div class="meta-item"><i>观看</i> 132</div>
+              <div class="meta-item"><i>赞</i> 点赞</div>
+            </div>
+            <span class="tag">前端</span>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="greeting">
+        <div class="greeting-section">
+          <h2>上午好！</h2>
+          <a href="./skip1.html" class="sign-in-btn">去签到</a>
+          <p>点亮在社区的每一天</p>
+        </div>
+        <div class="article-ranking-section">
+          <div class="section-header">
+            <span class="icon">方块;</span>
+            <span class="section-title">文章榜</span>
+            <a href="./skip2.html" class="refresh-btn">换一换</a>
+          </div>
+          <ol class="article-ateam">
+            <li class="article-item">
+              <span class="rank">1.</span>
+              <a href="./skip3.html" target="_blank" class="article-link"
+                >干翻
+              </a>
+            </li>
+            <li class="article-item">
+              <span class="rank">2.</span>
+              <a href="./skip3.html" target="_blank" class="article-link"
+                >Cursor
+              </a>
+            </li>
+            <li class="article-item">
+              <span class="rank">3.</span>
+              <a href="./skip3.html" target="_blank" class="article-link"
+                >如何</a
+              >
+            </li>
+            <li class="article-item">
+              <span class="rank">4.</span>
+              <a href="./skip3.html" target="_blank" class="article-link"
+                >Obsidian
+              </a>
+            </li>
+            <li class="article-item">
+              <span class="rank">5.</span>
+              <a href="./skip3.html" target="_blank" class="article-link"
+                >Console.log
+              </a>
+            </li>
+          </ol>
+          <a href="./skip4.html" target="_blank" class="view-more-btn"
+            >查看更多 ></a
+          >
+        </div>
+        <div class="author-rank">
+          <div class="title">
+            <span class="iton"></span>
+            <h3>作者榜</h3>
+          </div>
+          <ul class="author-list">
+            <li>
+              <div class="avatar"><img src="./作者.html" alt="头像" /></div>
+              <div class="info">
+                <p class="name">天天摸鱼的java工程师</p>
+                <p class="desc">软件开发工程师</p>
+              </div>
+              <a href="#" class="follow">+ 关注</a>
+            </li>
+            <li>
+              <div class="avatar"><img src="./作者.html" alt="头像" /></div>
+              <div class="info">
+                <p class="name">ErpanOmer</p>
+                <p class="desc">Web前端工程师 @跨境</p>
+              </div>
+              <a href="#" class="follow">+ 关注</a>
+            </li>
+            <li>
+              <div class="avatar"><img src="./作者.html" alt="头像" /></div>
+              <div class="info">
+                <p class="name">恋猫de小郭</p>
+                <p class="desc">Flutter & Dart GDE @...</p>
+              </div>
+              <a href="#" class="follow">+ 关注</a>
+            </li>
+            <li>
+              <div class="avatar"><img src="./作者.html" alt="头像" /></div>
+              <div class="info">
+                <p class="name">聚客AI</p>
+                <p class="desc">AI大模型应用开发工程师</p>
+              </div>
+              <a href="#" class="follow">+ 关注</a>
+            </li>
+            <li>
+              <div class="avatar">
+                <img src="./作者.html" alt="头像" />
+              </div>
+              <div class="info">
+                <p class="name">OneCode官方</p>
+                <p class="desc">CTO @onecode</p>
+              </div>
+              <a href="#" class="follow">+ 关注</a>
+            </li>
+          </ul>
+          <a href="#" class="view-more">查看更多></a>
+        </div>
+        <div class="recommend-topic">
+          <div class="topic-title">
+            <h3>推荐话题</h3>
+            <a href="#" class="change">换一换</a>
+          </div>
+          <ul class="topic-list">
+            <li>
+              <a href="#" class="topic-item"
+                >#挑战每日一条沸点# <span>18.9m</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="topic-item"
+                >#Trae 器更新了？# <span>554k</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="topic-item">#每日快讯# <span>8.7m</span></a>
+            </li>
+            <li>
+              <a href="#" class="topic-item">#MCP 怎么玩# <span>505k</span></a>
+            </li>
+            <li>
+              <a href="#" class="topic-item">#金石焕新程# <span>2.9m</span></a>
+            </li>
+            <li>
+              <a href="#" class="topic-item"
+                >#每天一个知识点# <span>38.7m</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="topic-item"
+                >#工作中做得最正确的... <span>307k</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="topic-item">#新人报道# <span>32.6m</span></a>
+            </li>
+            <li>
+              <a href="#" class="topic-item">#掘金一周# <span>597k</span></a>
+            </li>
+            <li>
+              <a href="#" class="topic-item"
+                >#金石计划征文活动# <span>35.5m</span></a
+              >
+            </li>
+          </ul>
+          <a href="#" class="view-more">查看更多></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const articleListEle = document.getElementById("articleList");
+    const arr = [
+      {
+        type: 1,
+        tab: "推荐",
+        children: [
+          {
+            title: "ref 实现原理",
+            desc: "ref 实现原理 ref 属性",
+            name: "狗头",
+            time: "2年前",
+            viewCount: 98,
+            tag: "前端",
+          },
+        ],
+      },
+      {
+        type: 2,
+        tab: "综合",
+        children: [
+          {
+            title: "setState 实现原理",
+            desc: "setState 什么时候是同步的",
+            name: "搜嘎",
+            time: "2年前",
+            viewCount: 98,
+            tag: "后端",
+          },
+        ],
+      },
+      {
+        type: 3,
+        tab: "后端",
+        children: [
+          {
+            title: "Jdk21优雅处理异步任务",
+            desc: "文主要介绍idk21 如何优雅的处理异步执行任务;下面给出了几个常见的案例，CompletableFuture。 什么时候是同步的",
+            name: "搜嘎",
+            time: "2年前",
+            viewCount: 98,
+            tag: "后端",
+          },
+        ],
+      },
+      {
+        type: 4,
+        tab: "前端",
+        children: [
+          {
+            title: "setState 实现原理",
+            desc: "setState 什么时候是同步的",
+            name: "搜嘎",
+            time: "2年前",
+            viewCount: 98,
+            tag: "后端",
+          },
+        ],
+      },
+      {
+        type: 5,
+        tab: "Android",
+        children: [
+          {
+            title: "setState 实现原理",
+            desc: "setState 什么时候是同步的",
+            name: "搜嘎",
+            time: "2年前",
+            viewCount: 98,
+            tag: "后端",
+          },
+        ],
+      },
+      {
+        type: 6,
+        tab: "iOS",
+        children: [
+          {
+            title: "setState 实现原理",
+            desc: "setState 什么时候是同步的",
+            name: "搜嘎",
+            time: "2年前",
+            viewCount: 98,
+            tag: "后端",
+          },
+        ],
+      },
+      {
+        type: 7,
+        tab: "人工智能",
+        children: [
+          {
+            title: "setState 实现原理",
+            desc: "setState 什么时候是同步的",
+            name: "搜嘎",
+            time: "2年前",
+            viewCount: 98,
+            tag: "后端",
+          },
+        ],
+      },
+      {
+        type: 8,
+        tab: "开发工具",
+        children: [
+          {
+            title: "setState 实现原理",
+            desc: "setState 什么时候是同步的",
+            name: "搜嘎",
+            time: "2年前",
+            viewCount: 98,
+            tag: "后端",
+          },
+        ],
+      },
+      {
+        type: 9,
+        tab: "阅读",
+        children: [
+          {
+            title: "setState 实现原理",
+            desc: "setState 什么时候是同步的",
+            name: "搜嘎",
+            time: "2年前",
+            viewCount: 98,
+            tag: "后端",
+          },
+        ],
+      },
+      {
+        type: 10,
+        tab: "排行榜",
+        children: [
+          {
+            title: "setState 实现原理",
+            desc: "setState 什么时候是同步的",
+            name: "搜嘎",
+            time: "2年前",
+            viewCount: 98,
+            tag: "后端",
+          },
+        ],
+      },
+    ];
+    function renderList(arrList = [], id) {
+      const obj = arrList.find((item) => item.type == id);
+      let str = "";
+      obj.children.forEach((item) => {
+        str += `
+            <div class="article-item">
+              <a href="#" class="article-title"><h2>${item.title}</h2></a>
+              <p class="article-desc">${item.desc}</p>
+              <div class="article-meta">
+                <div class="meta-taem">
+                  <div class="meta-item">${item.name}</div>
+                  <div class="meta-item"><i>日历</i>${item.time}</div>
+                  <div class="meta-item"><i>观看</i>${item.viewCount}</div>
+                  <div class="meta-item">
+                    <i class="iconfont icon-dianzan"></i> 点赞
+                  </div>
+                </div>
+                <span class="tag">${item.tag}</span>
+              </div>
+            </div>
+            `;
+      });
+      articleListEle.innerHTML = str;
+    }
+
+    renderList(arr, 1);
+
+    const sidebarItemEle = document.querySelectorAll(".sidebar-item");
+    console.log(sidebarItemEle);
+    for (let i = 0; i < sidebarItemEle.length; i++) {
+      const element = sidebarItemEle[i];
+
+      element.addEventListener("click", function (e) {
+        // highlight
+        Array.prototype.forEach.call(sidebarItemEle, (ele) => {
+          ele.classList.remove("active");
+        });
+
+        e.target.classList.add("active");
+
+        console.log(e.target.dataset);
+
+        renderList(arr, e.target.dataset.type);
+      });
+    }
+  </script>
+</html>
